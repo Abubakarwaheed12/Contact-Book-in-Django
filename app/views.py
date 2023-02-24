@@ -4,9 +4,11 @@ from app.models import Contact
 def home(request):
     allcontact=Contact.objects.all()
     print(allcontact)
-    if request.GET.get('name'):
+    q=request.GET.get('name')
+    if q:
         allcontact=Contact.objects.filter(name__contains=request.GET.get('name'))
-    allcontact
+    if q==None:
+        q=''
     context={
         'contacts':allcontact,
     }

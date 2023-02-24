@@ -39,16 +39,18 @@ def profile(request , id):
 
 
 def edit(request , id):
-    c_obj=Contact.objects.get(pk=id)
+    c_obj=Contact.objects.get(id=id)
+    print(c_obj)
     if request.method=='POST':
-        nm=request.POST.get('fullname')
-        rel=request.POST.get('relationship')
-        ph=request.POST.get('ph')
-        em=request.POST.get('Email')
-        addr=request.POST.get('address')
-        print(nm , rel , ph , em , addr )
-        c=Contact(name=nm , email=em , phone=ph, relation_ship=rel , address=addr)
-        c.save()
+        c_obj.name=request.POST.get('fullname')
+        c_obj.relation_ship=request.POST.get('relationship')
+        c_obj.phone=request.POST.get('ph')
+        c_obj.email=request.POST.get('Email')
+        c_obj.address=request.POST.get('address')
+        # print(nm , rel , ph , em , addr )
+        
+        # c_obj(name=nm , email=em , phone=ph, relation_ship=rel , address=addr)
+        c_obj.save()
         
         return redirect('home')
     
@@ -60,7 +62,8 @@ def edit(request , id):
 
 
 
-def delete(request):
-    return render(request, 'delete.html')
-
+def delete(request , id):
+    c_obj=Contact.objects.get(id=id)
+    c_obj.delete()
+    return redirect('home')
 

@@ -18,7 +18,7 @@ a{
 	display: flex;
 	justify-content: space-evenly;
 	color: #fff;
-	background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
+	background: linear-gradient(90deg, rgb(159, 164, 190) 0%, rgb(22, 96, 131) 100%);
 	padding: 2em 0;
 	align-items: center;
 }
@@ -73,7 +73,7 @@ hr{
 	padding: .4em .5em;
 	border-radius: 100px;
 	border-top-left-radius: 0;
-	background-color: #75A85E;
+	background-color: rgb(22, 96, 131);
 }
 
 .contact-section{

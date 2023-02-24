@@ -16,7 +16,7 @@ body{
 
 .hero{
 	color: #fff;
-	background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);	
+	background: linear-gradient(90deg, rgb(159, 164, 190) 0%, rgb(22, 96, 131) 100%);
 	padding: 2em 0; 
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 .friend{
-	background-color: #75A85E;
+	background-color: rgb(22, 96, 131);
 }
 
 .info-line{
@@ -68,7 +68,7 @@ p{
 }
 
 .icon-gradient{
-	background: linear-gradient(90deg, rgba(111,177,127,1) 0%, rgba(154,173,89,1) 100%);
+	background: rgb(22, 96, 131);
 	border-radius: 100px;
 	font-size: 1.5em;
 	padding: .5em;
